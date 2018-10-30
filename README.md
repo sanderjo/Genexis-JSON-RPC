@@ -3,6 +3,9 @@ Get info from your Genexis via JSON-RPC
 
 Developed and tested on a Genexis Platinum 7840
 
+
+#Introduction
+
 The Genexis Platinum 7840 has a web interface on http://192.168.1.254/ . Under the hood, the Genexis talks JSON-RPC against http://192.168.1.254/api
 
 Please note: you need the Genexis admin password to do all this. It's on the back of your Genexis.
@@ -37,7 +40,7 @@ The answer:
 ```
 So ... a lot of nice JSON info!
 
-** Hand job with curl
+#Hand job with curl
 
 Login, and get the sessionid:
 ```
