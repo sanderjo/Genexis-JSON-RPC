@@ -1,7 +1,7 @@
 # Genexis-JSON-RPC
 Get info from your Genexis via JSON-RPC
 
-Developed and tested on a Genexis Platinum 7840
+Developed and tested against a Genexis Platinum 7840
 
 
 # Introduction
@@ -75,5 +75,19 @@ $ curl -s --header "Content-Type: application/json"   --request POST   --data '{
             "ipaddr": "12.45.237.150",
 ...
 ```
+
+# Python script
+
+
+
+```
+$ python genexis-json-rpc.py ALHS7TEQ | grep -A3 ip6
+            "ip6addr": [
+                "fdd6:5a2d:3f20::1",
+                "fe80::36e3:80ff:fe14:7131"
+            ],
+```
+
+
 
 
