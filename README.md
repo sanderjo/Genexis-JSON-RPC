@@ -3,8 +3,32 @@ Get info from your Genexis via JSON-RPC
 
 Developed and tested against a Genexis Platinum 7840
 
+# Short: run Python script
 
-# Introduction
+First make sure you have installed `requests` (`pip install requests`). Then make sure you have the admin password for the GUI; it's on the back of the Genexis.
+
+Then runt the script:
+
+To get the "internet" octets (WAN Bytes):
+```
+$ python genexis-json-rpc.py 7LHS7TEQ | grep octets  | head -2
+            "rx_octets": 2147483647,
+            "tx_octets": 1787369724,
+
+```
+
+Or to see the IPv6 address:
+```
+$ python genexis-json-rpc.py ALHS7TEQ | grep -A3 ip6
+            "ip6addr": [
+                "fdd6:5a2d:3f20::1",
+                "fe80::36e3:80ff:fe14:7131"
+            ],
+```
+
+
+
+# Technical background
 
 The Genexis Platinum 7840 has a web interface on http://192.168.1.254/ . Under the hood, the Genexis talks JSON-RPC against http://192.168.1.254/api
 
@@ -76,17 +100,6 @@ $ curl -s --header "Content-Type: application/json"   --request POST   --data '{
 ...
 ```
 
-# Python script
-
-
-
-```
-$ python genexis-json-rpc.py ALHS7TEQ | grep -A3 ip6
-            "ip6addr": [
-                "fdd6:5a2d:3f20::1",
-                "fe80::36e3:80ff:fe14:7131"
-            ],
-```
 
 
 
