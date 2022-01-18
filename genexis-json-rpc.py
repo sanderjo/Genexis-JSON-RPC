@@ -33,7 +33,7 @@ def main():
     if response["result"]["result"] == 0:
         print("I got a OK response")
     else:
-        print("Error getting sessions id ... ")
+        print("Error getting session id ... ")
         exit(0)
 
 
