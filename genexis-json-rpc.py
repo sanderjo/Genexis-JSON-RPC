@@ -36,11 +36,6 @@ def main():
         print("Error getting sessions id ... ")
         exit(0)
 
-    """
-    if response["result"]['message'].find('Cannot create session - please try again later') >= 0:
-    	print("too much sessions ...")
-    	exit(0)
-    """
 
     sessionid = response["result"]["sessionid"]
 
